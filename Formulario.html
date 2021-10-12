@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" type="text/css" href="formulario.css">
+    <script src="formulario.js"></script>
+    <title>formulario</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Code Society</h1>
+        </header>
+        <form name="formulario" action='#' method='post' autocomplete='off' onsubmit="return envio_form()">
+            <div class="grupo">
+                <label id="name-label" for="name">Nombre</label>
+                <input type="text" name="formu" id="nombre" class="control" placeholder="Escriba su nombre" required />
+            </div>
+            <div class="grupo">
+                <label id="lastname-label" for="last-name">Apellido</label>
+                <input type="text" name="formu" id="apellido" class="control" placeholder="Escriba su Apellido"
+                    required />
+            </div>
+            <div class="grupo">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="formu" id="email" class="control" placeholder="Escriba su Email" required />
+            </div>
+            <div class="grupo">
+                <label id="fecha-label" for="date">Fecha de nacimiento</label>
+                <input type="date" name="formu" id="fechaNacimiento" class="control" onchange="Anos();"
+                    placeholder="Seleccione su fecha de nacimiento" value="@fechaNacimiento.ToString("dd/MM/yyyy")" required/>
+            </div>
+            <div class="grupo">
+                <label id="number-label" for="number">Edad</label>
+                <input type="number" name=formu"" id="EDAD"  class="control" value="@EDAD" placeholder="Edad" readonly/>
+            </div>
+            <div class="grupo">
+                <p>Mensaje</p>
+                <textarea id="input-textarea" class="textarea" name="formu" required
+                    placeholder="Deje su mensaje..."></textarea>
+            </div>
+            <div class="grupo">
+                <input type="submit" id="validarForm" class="enviar-button" value="ENVIAR" onclick ="valida_form(this)">
+            </input>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
